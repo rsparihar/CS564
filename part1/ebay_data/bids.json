@@ -1,0 +1,53 @@
+{
+  "Bids": {
+    "description": "Bids placed on the item",
+    "type": "array",
+    "items": {
+      "title": "Bid",
+      "type": "object",
+      "properties": {
+        "Bidder": {
+          "description": "Attribute UserID uniquely identifies a user. Attribute Rating is the user's rating. Note that a user may be a bidder in one auction and a seller in another. However, his Rating, Location, and Country information are the same wherever he appears in our data (which reflects a snapshot in time). Note this implies that UserIDs with missing location or country information cannot be sellers in another auction.",
+          "type": "object",
+          "properties": {
+            "Location": {
+              "description": "Location of bidder",
+              "type": "string",
+              "minimum": 0
+            },
+            "Country": {
+              "description": "Country of bidder",
+              "type": "string",
+              "minimum": 0
+            },
+            "UserID": {
+              "description": "unique id for a user across all users",
+              "type": "string"
+            },
+            "Rating": {
+              "description": "User's rating",
+              "type": "number"
+            }
+          },
+          "required": [
+            "UserID",
+            "Rating"
+          ]
+        },
+        "Time": {
+          "description": "Time of bid",
+          "type": "string"
+        },
+        "Amount": {
+          "description": "Amount of bid",
+          "type": "string"
+        },
+        "required": [
+          "Bidder",
+          "Time",
+          "Amount"
+        ]
+      }
+    }
+  }
+}

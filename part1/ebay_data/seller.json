@@ -1,0 +1,20 @@
+{
+  "Seller": {
+    "description": "Attributes give the seller's UserID and rating.",
+    "type": "object",
+    "properties": {
+      "UserID": {
+        "description": "unique id for a user across all users",
+        "type": "string"
+      },
+      "Rating": {
+        "description": "Users's rating",
+        "type": "number"
+      }
+    },
+    "required": [
+      "UserID",
+      "Rating"
+    ]
+  }
+}
